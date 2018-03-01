@@ -1,3 +1,7 @@
+import input.InputParser;
+
+import java.io.FileNotFoundException;
+
 public class Main {
 
 //  R – number of rows of the grid (1 ≤ R ≤ 10000)
@@ -7,16 +11,9 @@ public class Main {
 //● B – per-ride bonus for starting the ride on time (1 ≤ B ≤ 10000)
 //● T – number of steps in the simulation (1 ≤ T ≤ 10 )
 
-    int rows;
-    int columns;
-    int vehicles;
-    int rides;
-    int bonus;
-    int steps;
-
-    public static void main(String[] args) {
-
-
+    public static void main(String[] args) throws FileNotFoundException {
+        String filename = "input.in";
+        System.out.println(InputParser.parse(filename));
     }
 
 

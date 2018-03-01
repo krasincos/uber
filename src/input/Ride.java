@@ -19,4 +19,15 @@ public class Ride {
 //● f – the latest finish (0 ≤ f ≤ T) , (f ≥ s + |x − a| + |y − b|)
 
 
+    @Override
+    public String toString() {
+        return "Ride{" +
+                "rowStart=" + rowStart +
+                ", columnStart=" + columnStart +
+                ", rowFinish=" + rowFinish +
+                ", columnFinish=" + columnFinish +
+                ", earliestStart=" + earliestStart +
+                ", latestFinish=" + latestFinish +
+                '}';
+    }
 }

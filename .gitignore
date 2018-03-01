@@ -1,0 +1,16 @@
+/build
+/out
+/lib
+/bin
+/classes
+/logs
+
+.gradle
+.idea
+.shelf
+
+*.classpath
+*.project
+*.settings
+
+/src/main/resources/secret.properties
