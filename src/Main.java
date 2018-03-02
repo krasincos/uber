@@ -1,21 +1,43 @@
+import input.Input;
 import input.InputParser;
+import input.Ride;
+import output.Point;
 
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class Main {
 
-//  R – number of rows of the grid (1 ≤ R ≤ 10000)
-//● C – number of columns of the grid (1 ≤ C ≤ 10000)
-//● F – number of vehicles in the fleet (1 ≤ F ≤ 1000)
-//● N – number of rides (1 ≤ N ≤ 10000)
-//● B – per-ride bonus for starting the ride on time (1 ≤ B ≤ 10000)
-//● T – number of steps in the simulation (1 ≤ T ≤ 10 )
-
     public static void main(String[] args) throws FileNotFoundException {
-        String filename = "input.in";
-        System.out.println(InputParser.parse(filename));
+        Scanner scanner = new Scanner(new File("111"));
+        int n = 350;
+        List<String[]> list = new ArrayList<>();
+
+        while (scanner.hasNext()) {
+            list.add(scanner.nextLine().split(" "));
+        }
+
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i)[list.get(i).length - 1] + " ");
+            for (int j = 0; j < list.get(i).length - 1; j++) {
+                System.out.print(list.get(i)[j] + " ");
+            }
+            System.out.println();
+        }
+        int count = n - list.size();
+        if (list.size() < n) {
+            while (count != 0) {
+                System.out.println(0);
+                count--;
+            }
+        }
+
+
+        // new Solver().solve();
     }
-
-
 
 }

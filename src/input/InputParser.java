@@ -18,15 +18,17 @@ public class InputParser {
         input.bonus = Integer.valueOf(firstLine[4]);
         input.steps = Integer.valueOf(firstLine[5]);
 
+        int i = 0;
         while (scanner.hasNext()) {
             String[] line = scanner.nextLine().split(" ");
             Ride ride = new Ride();
-            ride.rowStart = Integer.valueOf(line[0]);
-            ride.columnStart = Integer.valueOf(line[1]);
-            ride.rowFinish = Integer.valueOf(line[2]);
-            ride.columnFinish = Integer.valueOf(line[3]);
-            ride.earliestStart = Integer.valueOf(line[4]);
-            ride.latestFinish = Integer.valueOf(line[5]);
+            ride.originalNumber = i++;
+            ride.startRow = Integer.valueOf(line[0]);
+            ride.startColumn = Integer.valueOf(line[1]);
+            ride.endRow = Integer.valueOf(line[2]);
+            ride.endColumn = Integer.valueOf(line[3]);
+            ride.start = Integer.valueOf(line[4]);
+            ride.end = Integer.valueOf(line[5]);
             input.rides.add(ride);
         }
 
